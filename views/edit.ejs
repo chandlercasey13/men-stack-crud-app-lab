@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Edit <%=languages.name%> <%if (languages.OOP) {%> (OOP) <% } %></h1>   
+<form action="/languages/<%=languages._id%>?_method=PUT" method ="POST" id="Add">
+    <label for="name"> Name:</label>
+    <input type="text" id="name" name="name" value = '<%=languages.name%>' >
+
+    <label for="details"> Description</label>
+    <textarea id="details" name="details" > <%=languages.details%> </textarea>
+
+    <label for ="OOP"> Is Language Object Oriented?</label>
+    <input type="checkbox" id="OOP" name="OOP" <% if (languages.OOP){%>checked<%}%>>
+
+<button type="submit">Submit</button>
+
+</form> 
+</body>
+</html>
