@@ -5,6 +5,7 @@ dotenv.config();
 
 const methodOverride = require("method-override"); // new
 const morgan = require("morgan"); //new
+const path = require("path");
 const mongoose = require("mongoose");
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method")); // new
 app.use(morgan("dev")); //new
 
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", async (req, res) => {
   res.render("home.ejs");
@@ -71,7 +73,7 @@ app.delete("/languages/:languageId", async (req, res) => {
     await Language.findByIdAndDelete(req.params.languageId)
 
     res.redirect('/languages')
-
+ 
   });
 
 

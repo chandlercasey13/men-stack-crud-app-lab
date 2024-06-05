@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
-<body>
+<body class="subpage">
 <h1>Edit <%=languages.name%> <%if (languages.OOP) {%> (OOP) <% } %></h1>   
 <form action="/languages/<%=languages._id%>?_method=PUT" method ="POST" id="Add">
     <label for="name"> Name:</label>

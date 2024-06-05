@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    
+  </head>
+  <nav>
     <a href="/languages"> Back</a>
 
-<h1> Add a Language</h1>
+    <h1>Add a Language</h1>
+  </nav>
+  <body class="subpage">
     
-<form action = '/languages' method ="POST" id="Add">
-    <label for="name"> Name:</label>
-    <input type="text" id="name" name="name" required >
 
-    <label for="details"> Description</label>
-    <textarea id="details" name="details"> </textarea>
+    <form action="/languages" method="POST" id="Add">
+      <label for="name"> Name:</label>
+      <input type="text" id="name" name="name" required />
 
-    <label for ="isOOP"> Is Language Object Oriented?</label>
-    <input type="checkbox" id="OOP" name="isOOP">
+      <label for="details"> Description</label>
+      <textarea id="details" name="details"> </textarea>
 
-<button type="submit">Submit</button>
+      <label for="isOOP"> Is Language Object Oriented?</label>
+      <input type="checkbox" id="OOP" name="isOOP" />
 
-</form>
-
-</body>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
